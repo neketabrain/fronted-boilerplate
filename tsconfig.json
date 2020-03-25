@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "lib": ["es5", "es6", "dom", "dom.iterable", "esnext"],
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "module": "esnext",
+    "target": "esnext",
+    "isolatedModules": false,
+    "noEmit": true,
+    "jsx": "react",
+    "allowJs": true,
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/assets/*"]
+    },
+    "typeRoots": ["node_modules/@types", "src/types"]
+  },
+  "include": ["src"],
+  "exclude": ["dist", "build", "node_modules", "bower_components"]
+}
