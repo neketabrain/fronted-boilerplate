@@ -1,14 +1,9 @@
-const path = require("path");
+/* eslint-disable */
 
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+const path = require("path");
 
 module.exports = {
   entry: path.resolve(__dirname, "src/index.tsx"),
-  output: {
-    filename: "[name].[hash].js",
-    path: path.resolve(__dirname, "dist"),
-  },
   resolve: {
     extensions: [".js", ".mjs", ".jsx", ".ts", ".tsx"],
     alias: {
@@ -30,15 +25,6 @@ module.exports = {
       maxSize: 256000,
     },
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new CopyWebpackPlugin([
-      {
-        from: path.resolve(__dirname, "public/favicon.ico"),
-        to: path.resolve(__dirname, "dist"),
-      },
-    ]),
-  ],
   module: {
     rules: [
       {
@@ -63,20 +49,12 @@ module.exports = {
         include: path.resolve(__dirname, "src"),
         exclude: /(node_modules|bower_components)/,
         use: {
-          loader: require.resolve("eslint-loader"),
+          loader: "eslint-loader",
           options: {
             eslintPath: require.resolve("eslint"),
             cache: true,
             failOnError: true,
           },
-        },
-      },
-      {
-        test: /\.(js|jsx|ts|tsx)$/,
-        include: path.resolve(__dirname, "src"),
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: "babel-loader",
         },
       },
     ],

@@ -22,9 +22,20 @@
       }
     }
   },
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import",
+    "optimize-regex",
+    "promise",
+    "react-hooks",
+    "@typescript-eslint"
+  ],
   "extends": [
     "react-app",
     "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
     "airbnb",
     "airbnb/hooks",
     "plugin:react/recommended",
@@ -34,14 +45,6 @@
     "plugin:import/warnings",
     "plugin:import/typescript",
     "plugin:promise/recommended"
-  ],
-  "plugins": [
-    "react",
-    "jsx-a11y",
-    "import",
-    "optimize-regex",
-    "promise",
-    "react-hooks"
   ],
   "rules": {
     "optimize-regex/optimize-regex": "warn",

@@ -4,6 +4,7 @@
       "@babel/preset-env",
       {
         "modules": false,
+        "loose": true,
         "targets": "> 0.25%",
         "useBuiltIns": "usage",
         "corejs": 3

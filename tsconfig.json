@@ -10,6 +10,7 @@
     "strictNullChecks": true,
     "module": "esnext",
     "target": "esnext",
+    "moduleResolution": "node",
     "isolatedModules": false,
     "noEmit": true,
     "jsx": "react",
