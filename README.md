@@ -1,1 +1,1 @@
-#Boilerplate for frontend project
+# Boilerplate for React project
