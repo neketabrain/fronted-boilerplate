@@ -6,6 +6,7 @@
     "es2020": true
   },
   "parserOptions": {
+    "project": "./tsconfig.eslint.json",
     "sourceType": "module",
     "ecmaVersion": 2020,
     "ecmaFeatures": {
@@ -47,6 +48,7 @@
     "plugin:promise/recommended"
   ],
   "rules": {
+    "no-console": "warn",
     "optimize-regex/optimize-regex": "warn",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
