@@ -2,7 +2,6 @@
 
 const path = require("path");
 
-const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
@@ -15,11 +14,14 @@ const common = require("./webpack.common");
 
 module.exports = merge(common, {
   mode: "production",
+  devtool: "source-map",
   output: {
     filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "dist"),
+    publicPath: "/",
   },
   optimization: {
+    runtimeChunk: true,
     concatenateModules: true,
     minimizer: [
       new OptimizeCssAssetsWebpackPlugin(),
@@ -29,10 +31,6 @@ module.exports = merge(common, {
     ],
   },
   plugins: [
-    new webpack.ProvidePlugin({
-      fetch:
-        "imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch",
-    }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin([
       {

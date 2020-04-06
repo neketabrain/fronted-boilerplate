@@ -27,13 +27,10 @@ module.exports = merge(common, {
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
+    publicPath: "/",
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.ProvidePlugin({
-      fetch:
-        "imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch",
-    }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "public/index.html"),
     }),
@@ -106,7 +103,6 @@ module.exports = merge(common, {
     publicPath: "/",
     compress: true,
     historyApiFallback: true,
-    host: "0.0.0.0",
     port: 3000,
     open: true,
     disableHostCheck: true,

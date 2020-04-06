@@ -51,9 +51,11 @@ module.exports = {
         use: {
           loader: "eslint-loader",
           options: {
-            eslintPath: require.resolve("eslint"),
             cache: true,
+            emitWarning: true,
+            emitError: true,
             failOnError: true,
+            quiet: false,
           },
         },
       },
