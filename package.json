@@ -1,7 +1,7 @@
 {
-  "name": "frontend-boilerplate",
+  "name": "react-app-boilerplate",
   "version": "1.0.0",
-  "description": "Frontend boilerplate",
+  "description": "React app boilerplate",
   "keywords": [
     "javascript",
     "js",
@@ -27,7 +27,7 @@
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack-dev-server --config webpack.dev.js",
-    "lint": "tsc && eslint src/**/*.{js,jsx,ts,tsx}",
+    "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
     "stats": "webpack --config webpack.prod.js --json > stats.json && webpack-bundle-analyzer stats.json"
   },
   "dependencies": {
