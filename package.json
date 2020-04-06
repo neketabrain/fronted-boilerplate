@@ -27,7 +27,7 @@
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack-dev-server --config webpack.dev.js",
-    "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
+    "lint": "eslint src/**/*.{js,jsx,ts,tsx} --cache",
     "stats": "webpack --config webpack.prod.js --json > stats.json && webpack-bundle-analyzer stats.json"
   },
   "dependencies": {
